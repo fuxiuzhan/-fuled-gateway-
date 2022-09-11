@@ -32,12 +32,9 @@ ENV AGENTPATH="/fxz/apps/apache-skywalking-apm-bin-es7/agent/skywalking-agent.ja
 
 EXPOSE 8080/tcp
 
-EXPOSE 53/udp
-
 CMD ["mkdir /data"]
 
 VOLUME ["/data"]
-
 
 RUN echo "java -javaagent:$AGENTPATH -Dskywalking.agent.service_name=$APPNAME -Dagent.sample_n_per_3_secs=10000 -Dskywalking.collector.backend_service=$SERVER $JAVA_OPTS  -jar $APPNAME-$VERSION.jar" > start.sh
 
