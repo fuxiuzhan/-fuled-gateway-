@@ -15,7 +15,7 @@ ENV APPNAME="fuled-gateway"
 
 ENV docker.env=true
 
-ENV VERSION=0.0.1-SNAPSHOT.jar
+ENV VERSION=0.0.1-SNAPSHOT
 
 ENV PATH=$PATH:/fxz/apps/
 
